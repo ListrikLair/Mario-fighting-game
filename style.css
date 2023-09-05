@@ -1,0 +1,59 @@
+#characters{
+    display: grid;
+    grid-template-columns: repeat(2, 8rem);
+    grid-template-rows: repeat(2, 8rem);
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-left: -8rem;
+}
+
+img{
+    max-width: 8rem;
+    max-height: 8rem;
+}
+
+#mushroomPlayer img{
+    max-width: 4rem;
+    max-height: 4rem;
+    /* padding-bottom: 2rem; */
+}
+
+#playerSide{
+    display: flex;
+    flex-direction: column;
+    float: left;
+}
+
+#bossSide{
+    display: flex;
+    flex-direction: column;
+    float: right;
+    flex-wrap: wrap;
+}
+
+#characterPlayer{
+    height: 10rem;
+    width: 10rem;
+    object-fit: contain;
+}
+
+#playerSelect{
+    background-image: url(./img/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    max-height: 100%;
+    text-align: center;
+}
+#battlefield{
+    background-image: url(./img/battleBackground.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    max-height: 100%;
+}
