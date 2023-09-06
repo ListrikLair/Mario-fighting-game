@@ -29,7 +29,7 @@ function updateView() {
 function updateViewCharacterSelect() {
     app.innerHTML = /*HTML*/`
     <div id="playerSelect">
-        <h1>select your character</h1>
+        <h1>CHOOSE YOUR CHARACTER</h1>
             <div id="characters">
                 <div id="mario" onclick="selectMario()"><img src="./img/mario.png" alt="" /></div>
                 <div id="luigi" onclick="selectLuigi()"><img src="./img/luigi.png" alt="" /></div>
