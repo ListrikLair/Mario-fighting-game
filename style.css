@@ -5,7 +5,6 @@
     height: 100%;
     width: 100%;
     position: relative;
-    top: 50%;
     left: 50%;
     margin-left: -8rem;
 }
@@ -15,29 +14,62 @@ img{
     max-height: 8rem;
 }
 
-#mushroomPlayer img{
-    max-width: 4rem;
-    max-height: 4rem;
-    /* padding-bottom: 2rem; */
-}
-
 #playerSide{
     display: flex;
     flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
     float: left;
 }
 
-#bossSide{
-    display: flex;
-    flex-direction: column;
-    float: right;
-    flex-wrap: wrap;
+#mushroomPlayer img{
+    max-width: 4rem;
+    max-height: 4rem;
+    cursor: pointer;
 }
 
 #characterPlayer{
     height: 10rem;
     width: 10rem;
     object-fit: contain;
+}
+
+#characterPlayer img{
+    max-width: 8rem;
+    max-height: 8rem;
+}
+
+.healthy{
+    background-color: green;
+}
+
+.hurt{
+    background-color: orange;
+}
+
+.wounded{
+    background-color: red;
+}
+
+#bossSide{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    right: 10%;
+}
+
+#mushroomBoss img{
+    max-width: 6rem;
+    max-height: 6rem;
+    cursor: pointer;
+}
+
+#characterBoss img{
+    max-width: 20rem;
+    max-height: 20rem;
 }
 
 #playerSelect{
@@ -49,16 +81,20 @@ img{
     max-height: 100%;
     float: left;
     width: 100%;
+    height: 95vh;
     text-align: center;
+    font-size: 200%;
 }
 #battlefield{
     background-image: url(./img/battleBackground.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
     max-width: 100%;
     max-height: 100%;
     float: left;
     width: 100%;
+    height: 95vh;
     text-align: center;
 }
