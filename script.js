@@ -5,10 +5,10 @@ let playerCharacter;
 let playerHealth;
 let maxPlayerHealth;
 let playerPower;
-let hpBarStageP = [0];
-let hpBarStageB = [0];
+let hpBarStageP = ['healthy'];
+let hpBarStageB = ['healthy'];
 let bossMushrooms = 1;
-let mushroomImage = './img/bowserMushroom.png'
+let mushroomImage = './img/bowserMushroom.png';
 let bossHealth = 300;
 const bossMaxHealth = 300;
 const intervalAttacks = setInterval(bossAttacks, 1500);
@@ -17,6 +17,7 @@ const intervalAttacks = setInterval(bossAttacks, 1500);
 // view
 stopInterval();
 setInterval(bossAttacks, 1500);
+hpBar();
 updateView();
 function updateView() {
     if (characterSelected == false) {
@@ -115,6 +116,8 @@ function attack() {
             characterSelected = false;
             playerHealth;
             bossHealth = bossMaxHealth;
+            bossMushrooms = 1;
+            mushroomImage = './img/bowserMushroom.png';
             stopInterval();
         }
     }
@@ -139,11 +142,13 @@ function bossAttacks() {
             bossMushrooms = 0;
             mushroomImage = '';
         }
-        if (playerHealth <= 0) {
+        if (playerHealth <= 0 && characterSelected == true) {
             alert("You Lose!")
             characterSelected = false;
             playerHealth;
             bossHealth = bossMaxHealth;
+            bossMushrooms = 1;
+            mushroomImage = './img/bowserMushroom.png';
             stopInterval();
         }
     }

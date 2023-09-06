@@ -9,6 +9,10 @@
     margin-left: -8rem;
 }
 
+#characters > div{
+    cursor: pointer;
+}
+
 img{
     max-width: 8rem;
     max-height: 8rem;
@@ -64,12 +68,12 @@ img{
 #mushroomBoss img{
     max-width: 6rem;
     max-height: 6rem;
-    cursor: pointer;
 }
 
 #characterBoss img{
     max-width: 20rem;
     max-height: 20rem;
+    cursor: pointer;
 }
 
 #playerSelect{
