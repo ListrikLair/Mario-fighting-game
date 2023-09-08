@@ -168,14 +168,14 @@ function hpBar(){
         hpBarStageP.splice(0, 1, 'healthy');
     } else if (playerHealth >= maxPlayerHealth * 0.33){
         hpBarStageP.splice(0, 1, 'hurt');
-    } else {
+    } else if (playerHealth < maxPlayerHealth * 0.33) {
         hpBarStageP.splice(0, 1, 'wounded');
     }
     if (bossHealth >= bossMaxHealth * 0.75){
         hpBarStageB.splice(0, 1, 'healthy');
     } else if (bossHealth >= bossMaxHealth * 0.33){
         hpBarStageB.splice(0, 1, 'hurt');
-    } else {
+    } else if (bossHealth < bossMaxHealth * 0.33){
         hpBarStageB.splice(0, 1, 'wounded');
     }
 }
